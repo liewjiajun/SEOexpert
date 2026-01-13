@@ -1,5 +1,7 @@
 # SEOExpert Website
 
+**GitHub Repository:** https://github.com/liewjiajun/SEOexpert
+
 ## Project Overview
 A modern, multi-page Next.js website for SEOExpert digital marketing agency. The site reflects values of work-life balance, remote-first culture, and digital nomad lifestyle with a vibrant Gen Z aesthetic.
 
@@ -111,6 +113,11 @@ A modern, multi-page Next.js website for SEOExpert digital marketing agency. The
 - `npm run dev` - Start development server (localhost:3000)
 - `npm run build` - Build for production
 - `npm run lint` - Run ESLint
+
+## Git Workflow
+- Repository: https://github.com/liewjiajun/SEOexpert
+- Main branch: `main`
+- Push changes: `git push origin main`
 
 ## Brand Values (reflect in copy/design)
 - Work-life balance over hustle culture
