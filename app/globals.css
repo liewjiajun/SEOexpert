@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-ink font-body antialiased;
+    /* Subtle gradient background */
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(217, 70, 239, 0.05) 0%, transparent 40%);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-display-xl font-normal tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-display-md font-normal;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-medium;
+  }
+
+  p {
+    @apply text-ink-secondary leading-relaxed;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-2 outline-offset-2 outline-violet-500 ring-0;
+  }
+
+  /* Purple selection */
+  ::selection {
+    @apply bg-violet-200 text-violet-900;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-header {
+    @apply text-center max-w-2xl mx-auto mb-12 md:mb-16;
+  }
+
+  /* Gradient Eyebrow */
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wider mb-4;
+    @apply bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent;
+  }
+
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-600 via-fuchsia-500 to-coral bg-clip-text text-transparent;
+  }
+
+  .text-gradient-animated {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #8B5CF6, #D946EF, #FB7185, #D946EF, #8B5CF6);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply backdrop-blur-glass bg-white/70 border border-white/30 shadow-glass rounded-card;
+  }
+
+  .glass-card-dark {
+    @apply backdrop-blur-glass bg-ink/80 border border-white/10 shadow-glass rounded-card;
+  }
+
+  /* Hover Lift Effect */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-card-hover;
+  }
+
+  /* Icon Container with Gradient */
+  .icon-gradient {
+    @apply bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white;
+    @apply shadow-glow-sm;
+  }
+
+  /* Animated Blob */
+  .blob {
+    @apply absolute rounded-full blur-3xl opacity-30;
+  }
+
+  .blob-violet {
+    @apply bg-violet-400;
+  }
+
+  .blob-fuchsia {
+    @apply bg-fuchsia-400;
+  }
+
+  .blob-coral {
+    @apply bg-coral;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animation-delay-2000 { animation-delay: 2000ms; }
+  .animation-delay-3000 { animation-delay: 3000ms; }
+  .animation-delay-4000 { animation-delay: 4000ms; }
+
+  /* Stagger delays for lists */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Text glow effects */
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(217, 70, 239, 0.5), 0 0 20px rgba(217, 70, 239, 0.3);
+  }
+}
